@@ -29,8 +29,10 @@ namespace Learning
             mItems.Add("Bob");
             mItems.Add("Tom");
             mItems.Add("Jim");
-                    
-            ArrayAdapter<string> adapter = new ArrayAdapter<string>(this ,Android.Resource.Layout.SimpleListItem1,mItems);
+
+
+            MyListViewAdapter adapter = new MyListViewAdapter(this, mItems);
+            
 
             mListView.Adapter = adapter;
 
