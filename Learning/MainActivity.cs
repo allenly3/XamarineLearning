@@ -4,6 +4,8 @@ using Android.Support.V7.App;
 using Android.Runtime;
 using Android.Widget;
 using System.Collections.Generic;
+using System;
+using Android.Views;
 
 namespace Learning
 {
@@ -45,8 +47,22 @@ namespace Learning
             mListView.Adapter = adapter;
 
 
+            mListView.ItemClick += itemClick;
+
+            mListView.ItemLongClick += MListView_ItemLongClick;
+ 
 
 
+        }
+
+        private void MListView_ItemLongClick(object sender, AdapterView.ItemLongClickEventArgs e)
+        {
+            Console.WriteLine(mItems[e.Position].age);
+        }
+
+        private void itemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            Console.WriteLine(mItems[e.Position].firstName);
         }
     }
 }
