@@ -6,6 +6,7 @@ using Android.Widget;
 using System.Collections.Generic;
 using System;
 using Android.Views;
+using Android.Content;
 
 namespace Learning
 {
@@ -29,7 +30,7 @@ namespace Learning
            
             mItems = new List<Person>();
             Person a = new Person();
-            a.firstName = "ALlen";
+            a.firstName = "Allen";
             a.lastName = "LIU";
             a.age = "Guess";
             a.gender = "Male";
@@ -57,7 +58,13 @@ namespace Learning
 
         private void MListView_ItemLongClick(object sender, AdapterView.ItemLongClickEventArgs e)
         {
-            Console.WriteLine(mItems[e.Position].age);
+            if (mItems[e.Position].firstName=="Allen")
+            {
+                var intent = new Intent(this, typeof(LoginPage));
+                intent.PutExtra("f", mItems[e.Position].firstName);
+                intent.PutExtra("l", mItems[e.Position].lastName);
+                StartActivity(intent);
+            }
         }
 
         private void itemClick(object sender, AdapterView.ItemClickEventArgs e)
