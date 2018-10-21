@@ -2405,6 +2405,9 @@ namespace Learning
 			// aapt resource value: 0x7f080027
 			public const int add = 2131230759;
 			
+			// aapt resource value: 0x7f0800af
+			public const int age = 2131230895;
+			
 			// aapt resource value: 0x7f080070
 			public const int alertTitle = 2131230832;
 			
@@ -2522,6 +2525,9 @@ namespace Learning
 			// aapt resource value: 0x7f080072
 			public const int expanded_menu = 2131230834;
 			
+			// aapt resource value: 0x7f0800ad
+			public const int fName = 2131230893;
+			
 			// aapt resource value: 0x7f080050
 			public const int fill = 2131230800;
 			
@@ -2536,6 +2542,9 @@ namespace Learning
 			
 			// aapt resource value: 0x7f080058
 			public const int forever = 2131230808;
+			
+			// aapt resource value: 0x7f0800b0
+			public const int gender = 2131230896;
 			
 			// aapt resource value: 0x7f08000a
 			public const int ghost_view = 2131230730;
@@ -2567,6 +2576,9 @@ namespace Learning
 			// aapt resource value: 0x7f080000
 			public const int item_touch_helper_previous_elevation = 2131230720;
 			
+			// aapt resource value: 0x7f0800ae
+			public const int lName = 2131230894;
+			
 			// aapt resource value: 0x7f08008d
 			public const int largeLabel = 2131230861;
 			
@@ -2585,14 +2597,14 @@ namespace Learning
 			// aapt resource value: 0x7f080061
 			public const int list_item = 2131230817;
 			
-			// aapt resource value: 0x7f0800b0
-			public const int masked = 2131230896;
+			// aapt resource value: 0x7f0800b3
+			public const int masked = 2131230899;
 			
 			// aapt resource value: 0x7f0800a0
 			public const int media_actions = 2131230880;
 			
-			// aapt resource value: 0x7f0800ae
-			public const int message = 2131230894;
+			// aapt resource value: 0x7f0800b1
+			public const int message = 2131230897;
 			
 			// aapt resource value: 0x7f080031
 			public const int middle = 2131230769;
@@ -2831,9 +2843,6 @@ namespace Learning
 			// aapt resource value: 0x7f080013
 			public const int transition_transform = 2131230739;
 			
-			// aapt resource value: 0x7f0800ad
-			public const int txtName = 2131230893;
-			
 			// aapt resource value: 0x7f08002d
 			public const int uniform = 2131230765;
 			
@@ -2846,8 +2855,8 @@ namespace Learning
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f0800af
-			public const int visible = 2131230895;
+			// aapt resource value: 0x7f0800b2
+			public const int visible = 2131230898;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;

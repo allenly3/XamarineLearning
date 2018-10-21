@@ -13,12 +13,12 @@ using Java.Lang;
 
 namespace Learning
 {
-    class MyListViewAdapter : BaseAdapter<string>
+    class MyListViewAdapter : BaseAdapter<Person>
     {
 
-        private List<string> mItems;
+        private List<Person> mItems;
         private Context mContext;
-        public MyListViewAdapter(Context context,List<string> items)
+        public MyListViewAdapter(Context context,List<Person> items)
         {
            mItems = items;
             mContext = context;
@@ -39,13 +39,14 @@ namespace Learning
             return position;
         }
 
-        public override string this[int position]
+        public override Person this[int position]
         {
             get
             {
                 return mItems[position];
             }
         }
+
 
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
@@ -54,8 +55,15 @@ namespace Learning
             {
                 row = LayoutInflater.From(mContext).Inflate(Resource.Layout.row, null, false);
             }
-            TextView txtName = row.FindViewById<TextView>(Resource.Id.txtName);
-            txtName.Text = mItems[position];
+            TextView firstName = row.FindViewById<TextView>(Resource.Id.fName);
+            TextView lastName = row.FindViewById<TextView>(Resource.Id.lName);
+            TextView age = row.FindViewById<TextView>(Resource.Id.age);
+            TextView gender = row.FindViewById<TextView>(Resource.Id.gender);
+
+            firstName.Text = mItems[position].firstName;
+            lastName.Text = mItems[position].lastName;
+            age.Text = mItems[position].age;
+            gender.Text = mItems[position].gender;
 
             return row;
         }

@@ -11,7 +11,7 @@ namespace Learning
     public class MainActivity : AppCompatActivity
     {
 
-        private List<string> mItems;
+        private List<Person> mItems;
         private ListView mListView;
 
 
@@ -25,10 +25,18 @@ namespace Learning
             mListView = FindViewById<ListView>(Resource.Id.myListView);
 
            
-            mItems = new List<string>();
-            mItems.Add("Bob");
-            mItems.Add("Tom");
-            mItems.Add("Jim");
+            mItems = new List<Person>();
+            Person a = new Person();
+            a.firstName = "ALlen";
+            a.lastName = "LIU";
+            a.age = "Guess";
+            a.gender = "Male";
+            mItems.Add(a);
+
+            mItems.Add(new Person() { firstName = "Lebron", lastName = "James", age = "34", gender = "Male" });
+            mItems.Add(new Person() { firstName = "Chris", lastName = "Paul", age = "34", gender = "Male" });
+
+
 
 
             MyListViewAdapter adapter = new MyListViewAdapter(this, mItems);
