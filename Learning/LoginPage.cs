@@ -15,6 +15,9 @@ namespace Learning
     [Activity(Label = "LoginPage")]
     public class LoginPage : Activity
     {
+
+
+        private Button gbtSignup;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -29,7 +32,16 @@ namespace Learning
 
             tv.Text = "Welcome " + fname + " " + lname + " !";
 
+            gbtSignup = FindViewById<Button>(Resource.Id.signup);
+            gbtSignup.Click += gbtSignup_click;
 
+        }
+
+        private void gbtSignup_click(object sender, EventArgs e)
+        {
+            FragmentTransaction transaction = FragmentManager.BeginTransaction();
+            DialogSignUp popUpWindow = new DialogSignUp();
+            popUpWindow.Show(transaction,"dialog");
         }
     }
 }

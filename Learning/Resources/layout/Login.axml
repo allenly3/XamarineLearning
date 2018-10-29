@@ -50,7 +50,7 @@
 		android:textSize="25dp"
 		android:gravity="center"
 		android:id="@+id/or" />
-		<Button
+	<Button
 		android:text="Sign up with Email"
 		android:layout_width="match_parent"
 		android:layout_weight="15"
@@ -60,7 +60,8 @@
 		android:layout_marginLeft="20dp"
 		android:layout_marginRight="20dp"
 		android:textSize="15sp"
-		android:textColor="#123456"/>
+		android:textColor="#123456"
+		android:drawableLeft="@drawable/download" />
 
 
 	<RelativeLayout
