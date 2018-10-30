@@ -33,11 +33,11 @@ namespace Learning
             tv.Text = "Welcome " + fname + " " + lname + " !";
 
             gbtSignup = FindViewById<Button>(Resource.Id.signup);
-            gbtSignup.Click += gbtSignup_click;
+            gbtSignup.Click += GbtSignup_click;
 
         }
 
-        private void gbtSignup_click(object sender, EventArgs e)
+        private void GbtSignup_click(object sender, EventArgs e)
         {
             FragmentTransaction transaction = FragmentManager.BeginTransaction();
             DialogSignUp popUpWindow = new DialogSignUp();

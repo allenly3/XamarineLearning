@@ -22,5 +22,15 @@ namespace Learning
 
             return view;
         }
+
+        public override void OnActivityCreated(Bundle savedInstanceState)
+        {
+
+            Dialog.Window.RequestFeature(WindowFeatures.NoTitle);// set the title bar to invisible
+
+            base.OnActivityCreated(savedInstanceState);
+
+            Dialog.Window.Attributes.WindowAnimations = Resource.Style.dialog_animation;//set the animation
+        }
     }
 }
