@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.Threading;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -18,6 +18,7 @@ namespace Learning
 
 
         private Button gbtSignup;
+        private ProgressBar progressbar;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -35,13 +36,32 @@ namespace Learning
             gbtSignup = FindViewById<Button>(Resource.Id.signup);
             gbtSignup.Click += GbtSignup_click;
 
+            progressbar = FindViewById<ProgressBar>(Resource.Id.progressBar1);
         }
 
         private void GbtSignup_click(object sender, EventArgs e)
         {
             FragmentTransaction transaction = FragmentManager.BeginTransaction();
+            
             DialogSignUp popUpWindow = new DialogSignUp();
             popUpWindow.Show(transaction,"dialog");
+
+            popUpWindow.sumbitComplete += PopUpWindow_sumbitComplete;
+        }
+
+        private void PopUpWindow_sumbitComplete(object sender, SubmitEventArgs e)
+        {
+            //at this step, we gonna send the information to the server
+            progressbar.Visibility = ViewStates.Visible;
+            Thread thread = new Thread(ActLikeARequest);
+            thread.Start();
+            string username = e.Name;
+        }
+        private void ActLikeARequest()
+        {
+            Thread.Sleep(3000);
+
+            RunOnUiThread(() => { progressbar.Visibility = ViewStates.Invisible; });
         }
     }
 }

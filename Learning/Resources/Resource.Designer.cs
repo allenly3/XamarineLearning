@@ -2276,7 +2276,7 @@ namespace Learning
 			public const int design_snackbar_background = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public const int download = 2130837596;
+			public const int email = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
 			public const int navigation_empty_icon = 2130837597;
