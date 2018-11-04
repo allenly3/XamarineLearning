@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
+using MySql.Data.MySqlClient;
 
 namespace Learning
 {
@@ -18,6 +19,7 @@ namespace Learning
         private string name;
         private string email;
         private string password;
+        private string repassword;
 
         public string Name
         {
@@ -33,6 +35,11 @@ namespace Learning
         {
             get { return password; }
             set { password = value; }
+        }
+        public string Repassword
+        {
+            get { return repassword; }
+            set { repassword = value; }
         }
         
         public SubmitEventArgs(string n,string e,string p):base()
@@ -50,6 +57,7 @@ namespace Learning
         private EditText gUserName;
         private EditText gEmail;
         private EditText gPassword;
+        private EditText gRepassword;
         private Button gButton;
 
         public event EventHandler<SubmitEventArgs> sumbitComplete;
@@ -63,6 +71,7 @@ namespace Learning
             gUserName = view.FindViewById<EditText>(Resource.Id.username);
             gEmail = view.FindViewById<EditText>(Resource.Id.email);
             gPassword = view.FindViewById<EditText>(Resource.Id.password);
+            gRepassword = view.FindViewById<EditText>(Resource.Id.repassword);
             gButton = view.FindViewById<Button>(Resource.Id.button1);
 
             gButton.Click += submit;
@@ -72,8 +81,35 @@ namespace Learning
         
         private void submit(Object sender, EventArgs e)
         {
-            sumbitComplete.Invoke(this, new SubmitEventArgs(gUserName.Text,gEmail.Text,gPassword.Text));
-            this.Dismiss();
+ 
+            MySqlConnection con = new MySqlConnection("Server=db4free.net;Port=3306;database=allendb;User Id=allenly3;Password=900729ly3;charset=utf8");
+
+            try
+            {
+                //sumbitComplete.Invoke(this, new SubmitEventArgs(gUserName.Text, gEmail.Text, gPassword.Text));
+                  //this.Dismiss();
+                    
+                if(con.State==System.Data.ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                   
+             
+
+
+     
+                Console.WriteLine("Successful");
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                con.Close();
+            }
+           
+
         }
 
         public override void OnActivityCreated(Bundle savedInstanceState)
