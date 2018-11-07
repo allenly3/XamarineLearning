@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.Data;
+using MySql.Data.MySqlClient;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -10,7 +11,7 @@ using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
-using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
 
 namespace Learning
 {
@@ -59,6 +60,7 @@ namespace Learning
         private EditText gPassword;
         private EditText gRepassword;
         private Button gButton;
+        private TextView gResult;
 
         public event EventHandler<SubmitEventArgs> sumbitComplete;
 
@@ -73,7 +75,7 @@ namespace Learning
             gPassword = view.FindViewById<EditText>(Resource.Id.password);
             gRepassword = view.FindViewById<EditText>(Resource.Id.repassword);
             gButton = view.FindViewById<Button>(Resource.Id.button1);
-
+            gResult = view.FindViewById<TextView>(Resource.Id.result);
             gButton.Click += submit;
 
             return view;
@@ -81,33 +83,27 @@ namespace Learning
         
         private void submit(Object sender, EventArgs e)
         {
- 
-            MySqlConnection con = new MySqlConnection("Server=db4free.net;Port=3306;database=allendb;User Id=allenly3;Password=900729ly3;charset=utf8");
+                sumbitComplete.Invoke(this, new SubmitEventArgs(gUserName.Text, gEmail.Text, gPassword.Text));
+                 this.Dismiss();
+            
+            //MySqlConnection con = new MySqlConnection("Server=db4free.net;Port=3306;database=allendb;User Id=allenly3;Password=900729ly3;charset=utf8");
 
-            try
-            {
-                //sumbitComplete.Invoke(this, new SubmitEventArgs(gUserName.Text, gEmail.Text, gPassword.Text));
-                  //this.Dismiss();
-                    
-                if(con.State==System.Data.ConnectionState.Closed)
-                {
-                    con.Open();
-                }
-                   
-             
-
-
-     
-                Console.WriteLine("Successful");
-            }
-            catch (MySqlException ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
-            finally
-            {
-                con.Close();
-            }
+            //try
+            //{
+            //    if(con.State==ConnectionState.Closed)
+            //    {
+            //        gResult.Text = con.State.ToString();
+            //    }
+            //    con.Open();
+            //}
+            //catch (Exception ex)
+            //{
+            //    gResult.Text = ex.ToString();
+            //}
+            //finally
+            //{
+            //    con.Close();
+            //}
            
 
         }

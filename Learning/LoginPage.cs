@@ -16,7 +16,7 @@ namespace Learning
     public class LoginPage : Activity
     {
 
-
+        private Button gbtSignin;
         private Button gbtSignup;
         private ProgressBar progressbar;
         protected override void OnCreate(Bundle savedInstanceState)
@@ -34,9 +34,19 @@ namespace Learning
             tv.Text = "Welcome " + fname + " " + lname + " !";
 
             gbtSignup = FindViewById<Button>(Resource.Id.signup);
+            gbtSignin = FindViewById<Button>(Resource.Id.signin);
             gbtSignup.Click += GbtSignup_click;
+            gbtSignin.Click += GbtSignin_Click;
 
             progressbar = FindViewById<ProgressBar>(Resource.Id.progressBar1);
+        }
+
+        private void GbtSignin_Click(object sender, EventArgs e)
+        {
+            FragmentTransaction transaction = FragmentManager.BeginTransaction();
+            DialogSignIn popWindow = new DialogSignIn();
+            popWindow.Show(transaction, "dialog");
+  
         }
 
         private void GbtSignup_click(object sender, EventArgs e)

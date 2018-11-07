@@ -2,8 +2,8 @@
 <LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:orientation="vertical"
-	android:layout_width="380dp"
-	android:layout_height="300dp"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
 	android:weightSum="100"
 	android:background="#d7d9dd">
 	<EditText
@@ -61,5 +61,11 @@
 		android:textSize="15dp"
 		android:textStyle="bold"
 		android:drawableLeft="@drawable/email" />
+	<TextView
+		android:text=""
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/result" />
 
 </LinearLayout>
