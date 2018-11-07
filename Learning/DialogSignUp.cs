@@ -117,8 +117,6 @@ namespace Learning
 
             Dialog.Window.Attributes.WindowAnimations = Resource.Style.dialog_animation;//set the animation
 
-             
-
             Dialog.Window.Attributes.Width =Convert.ToInt32(0.8*ViewGroup.LayoutParams.MatchParent);
             Dialog.Window.Attributes.Height = ViewGroup.LayoutParams.WrapContent;
 
