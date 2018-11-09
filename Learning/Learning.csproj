@@ -63,12 +63,15 @@
   <ItemGroup>
     <Compile Include="DialogSignIn.cs" />
     <Compile Include="DialogSignUp.cs" />
+    <Compile Include="LearningContent.cs" />
     <Compile Include="LoginPage.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="MyListViewAdapter.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SlidingTabScrollView.cs" />
+    <Compile Include="SlidingTapStrip.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

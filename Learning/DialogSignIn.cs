@@ -17,6 +17,7 @@ namespace Learning
 
         private EditText gUserName;
         private EditText gPassword;
+        private Button gSignInbt;
  
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
@@ -26,11 +27,20 @@ namespace Learning
 
             gUserName = view.FindViewById<EditText>(Resource.Id.username);
             gPassword = view.FindViewById<EditText>(Resource.Id.password);
-     
+            gSignInbt = view.FindViewById<Button>(Resource.Id.bt1);
 
+            gSignInbt.Click += GSignInbt_Click;
             
             return view;
 
+        }
+
+        private void GSignInbt_Click(object sender, EventArgs e)
+        {
+            if(gUserName.Text=="allenly3"&&gPassword.Text=="123")
+            {
+
+            }
         }
 
         public override void OnActivityCreated(Bundle savedInstanceState)

@@ -19,7 +19,7 @@
 
 
 	<TextView
-		android:text="Create An Account"
+		android:text="Welcome To Xamarin Learning"
 		android:textAppearance="?android:attr/textAppearanceMedium"
 		android:layout_width="match_parent"
 		android:layout_weight="20"
