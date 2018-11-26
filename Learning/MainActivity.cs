@@ -65,6 +65,12 @@ namespace Learning
                 intent.PutExtra("l", mItems[e.Position].lastName);
                 StartActivity(intent);
             }
+
+            else
+            {
+                Intent intent = new Intent(this, typeof(Swap));
+                StartActivity(intent);
+            }
         }
 
         private void itemClick(object sender, AdapterView.ItemClickEventArgs e)
