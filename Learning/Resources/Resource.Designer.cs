@@ -3908,6 +3908,12 @@ namespace Learning
 			// aapt resource value: 0x7f0a0161
 			public const int Base_Widget_Design_TabLayout = 2131362145;
 			
+			// aapt resource value: 0x7f0a0182
+			public const int CustomActionBarTheme = 2131362178;
+			
+			// aapt resource value: 0x7f0a0183
+			public const int MyActionBar = 2131362179;
+			
 			// aapt resource value: 0x7f0a001e
 			public const int Platform_AppCompat = 2131361822;
 			

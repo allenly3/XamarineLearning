@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace Learning
 {
-    [Activity(Label = "Swap")]
+    [Activity(Label = "@string/app_name", Theme = "@style/CustomActionBarTheme")]
     public class Swap : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -23,7 +23,7 @@ namespace Learning
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
-
+     
             FragmentTransaction transaction = FragmentManager.BeginTransaction();
             SlidingTabsFragment fragment = new SlidingTabsFragment();
             transaction.Replace(Resource.Id.sample_content_fragment, fragment);

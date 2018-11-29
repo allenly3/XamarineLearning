@@ -10,8 +10,8 @@ using Android.Content;
 
 namespace Learning
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
-    public class MainActivity : AppCompatActivity
+    [Activity(Label = "@string/app_name", Theme = "@style/CustomActionBarTheme", MainLauncher = true)]
+    public class MainActivity : Activity
     {
 
         private List<Person> mItems;
