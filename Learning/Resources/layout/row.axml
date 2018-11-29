@@ -21,8 +21,9 @@
 		android:layout_height="wrap_content"
 		android:id="@+id/lName"
 		android:layout_marginTop="5dp"
+			android:layout_marginBottom="5dp" 
 		android:layout_marginLeft="10dp"
-		android:layout_marginBottom="5dp" />
+	/>
 		<TextView
 		android:text="Age"
 		android:layout_width="match_parent"

@@ -156,7 +156,8 @@ namespace Learning
                 tabView.Text = ((SlidingTabsFragment.SamplePagerAdapter)adapter).GetHeaderTitle(i);
                 tabView.SetTextColor(Android.Graphics.Color.Black);
                 //tabView.Visibility = ViewStates.Gone;
-                //tabView.SetWidth(100);
+                var pixels = Resources.DisplayMetrics.WidthPixels;
+                tabView.SetWidth(pixels/2);
                 tabView.Tag = i;
                 tabView.Click += tabView_Click;
                 mTabStrip.AddView(tabView);
