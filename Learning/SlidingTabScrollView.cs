@@ -18,7 +18,7 @@ namespace Learning
    public class SlidingTabScrollView:HorizontalScrollView
     {
 
-        private const int TITLE_OFFSET_DIPS = 24;
+        private const int TITLE_OFFSET_DIPS = 100;
         private const int TAB_VIEW_PADDING_DIPS = 16;
         private const int TAB_VIEW_TEXT_SIZE_SP = 12;
 
@@ -155,6 +155,8 @@ namespace Learning
                 TextView tabView = CreateDefaultTabView(Context);
                 tabView.Text = ((SlidingTabsFragment.SamplePagerAdapter)adapter).GetHeaderTitle(i);
                 tabView.SetTextColor(Android.Graphics.Color.Black);
+                //tabView.Visibility = ViewStates.Gone;
+                //tabView.SetWidth(100);
                 tabView.Tag = i;
                 tabView.Click += tabView_Click;
                 mTabStrip.AddView(tabView);
@@ -174,6 +176,7 @@ namespace Learning
             TextView textView = new TextView(context);
             textView.Gravity = GravityFlags.Center;
             textView.SetTextSize(ComplexUnitType.Sp, TAB_VIEW_TEXT_SIZE_SP);
+    
             textView.Typeface = Android.Graphics.Typeface.DefaultBold;
 
             if (Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Honeycomb)

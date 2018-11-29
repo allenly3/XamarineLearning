@@ -28,7 +28,7 @@ namespace Learning
         {
             mSlidingTabScrollView = view.FindViewById<SlidingTabScrollView>(Resource.Id.sliding_tabs);
             mViewPager = view.FindViewById<ViewPager>(Resource.Id.viewpager);
-            mViewPager.Adapter = new SamplePagerAdapter();
+            mViewPager.Adapter = new SamplePagerAdapter(this.Context);
 
             mSlidingTabScrollView.ViewPager = mViewPager;
         }
@@ -36,14 +36,16 @@ namespace Learning
         public class SamplePagerAdapter : PagerAdapter
         {
             List<string> items = new List<string>();
+            private List<Person> mItems;
+            Context context;
 
-            public SamplePagerAdapter() : base()
+
+            public SamplePagerAdapter(Context context) : base()
             {
-                items.Add("Xamarin");
-                items.Add("Android");
-                items.Add("Tutorial");
-                items.Add("Part");
-                items.Add("12");
+                items.Add("Instruction");
+                items.Add("Video");
+                this.context = context;
+
             }
 
             public override int Count
@@ -63,8 +65,47 @@ namespace Learning
 
                 TextView txtTitle = view.FindViewById<TextView>(Resource.Id.item_title);
                 int pos = position + 1;
-                txtTitle.Text = pos.ToString();
+                //txtTitle.Text = pos.ToString();
 
+                ListView lv = view.FindViewById<ListView>(Resource.Id.myListView);
+                if (pos == 1)
+                {
+                    
+
+                    mItems = new List<Person>();
+                    Person a = new Person();
+                    a.firstName = "Allen";
+                    a.lastName = "LIU";
+                    a.age = "Guess";
+                    a.gender = "Male";
+                    mItems.Add(a);
+
+                    mItems.Add(new Person() { firstName = "Lebron", lastName = "James", age = "34", gender = "Male" });
+                    mItems.Add(new Person() { firstName = "Chris", lastName = "Paul", age = "34", gender = "Male" });
+                }
+                else
+                {
+                    
+
+                    mItems = new List<Person>();
+                    Person a = new Person();
+                    a.firstName = "YIIIIIIIIII";
+                    a.lastName = "LIUUUUUUU";
+                    a.age = "Guess";
+                    a.gender = "Male";
+                    mItems.Add(a);
+
+                    mItems.Add(new Person() { firstName = "Kobe", lastName = "James", age = "34", gender = "Male" });
+                    mItems.Add(new Person() { firstName = "HAHA", lastName = "Paul", age = "34", gender = "Male" });
+
+                }
+
+
+
+                MyListViewAdapter adapter = new MyListViewAdapter(context, mItems);
+
+
+                lv.Adapter = adapter;
                 return view;
             }
 
