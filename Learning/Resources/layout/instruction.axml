@@ -4,34 +4,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 	android:weightSum="100">
-	<ImageView
-		android:src="@android:drawable/ic_menu_gallery"
+		<TextView
+		android:text="1"
+		android:textSize="40dp"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:minWidth="50dp"
 		android:minHeight="50dp"
-		android:id="@+id/imageView1"
-	 android:layout_weight="20"
+		android:gravity="center"
+		android:id="@+id/num"
 			android:layout_marginTop="5dp"
 			android:layout_marginBottom="5dp" />
 	<TextView
-		android:text="Text"
+		android:text="Title"
 		android:textSize="25dp"
-		android:layout_width="262.5dp"
+		android:layout_width="293.0dp"
 		android:layout_height="wrap_content"
 		android:minWidth="50dp"
 		android:minHeight="50dp"
 		android:gravity="center"
 		android:id="@+id/Title"
-			android:layout_marginTop="5dp"
-			android:layout_marginBottom="5dp" />
+		android:layout_marginBottom="5dp" />
 	<ImageView
 		android:src="@drawable/righticon"
-		android:layout_width="50dp"
+		android:layout_width="20dp"
 		android:layout_height="50dp"
 		android:minWidth="50dp"
 		android:minHeight="50dp"
-		android:id="@+id/imageView2"
+		android:id="@+id/imageView"
 			android:layout_marginTop="5dp"
 			android:layout_marginBottom="5dp" />
  	 

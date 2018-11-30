@@ -61,6 +61,8 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContentAdatper.cs" />
+    <Compile Include="ContentOject.cs" />
     <Compile Include="DialogSignIn.cs" />
     <Compile Include="DialogSignUp.cs" />
     <Compile Include="LearningContent.cs" />

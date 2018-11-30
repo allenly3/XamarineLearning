@@ -2612,11 +2612,8 @@ namespace Learning
 			// aapt resource value: 0x7f08005f
 			public const int image = 2131230815;
 			
-			// aapt resource value: 0x7f0800a3
-			public const int imageView1 = 2131230883;
-			
 			// aapt resource value: 0x7f0800a5
-			public const int imageView2 = 2131230885;
+			public const int imageView = 2131230885;
 			
 			// aapt resource value: 0x7f0800bb
 			public const int info = 2131230907;
@@ -2698,6 +2695,9 @@ namespace Learning
 			
 			// aapt resource value: 0x7f0800b6
 			public const int notification_main_column_container = 2131230902;
+			
+			// aapt resource value: 0x7f0800a3
+			public const int num = 2131230883;
 			
 			// aapt resource value: 0x7f0800a9
 			public const int or = 2131230889;

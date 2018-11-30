@@ -35,8 +35,9 @@ namespace Learning
 
         public class SamplePagerAdapter : PagerAdapter
         {
-            List<string> items = new List<string>();
-            private List<Person> mItems;
+            List<string> items = new List<string>(); //tab 
+
+            private List<ContentOject> mItems;
             Context context;
 
 
@@ -63,7 +64,7 @@ namespace Learning
                 View view = LayoutInflater.From(container.Context).Inflate(Resource.Layout.pager_item, container, false);
                 container.AddView(view);
 
-                TextView txtTitle = view.FindViewById<TextView>(Resource.Id.item_title);
+                //TextView txtTitle = view.FindViewById<TextView>(Resource.Id.item_title);
                 int pos = position + 1;
                 //txtTitle.Text = pos.ToString();
 
@@ -72,37 +73,26 @@ namespace Learning
                 {
                     
 
-                    mItems = new List<Person>();
-                    Person a = new Person();
-                    a.firstName = "Allen";
-                    a.lastName = "LIU";
-                    a.age = "Guess";
-                    a.gender = "Male";
-                    mItems.Add(a);
+                    mItems = new List<ContentOject>();
 
-                    mItems.Add(new Person() { firstName = "Lebron", lastName = "James", age = "34", gender = "Male" });
-                    mItems.Add(new Person() { firstName = "Chris", lastName = "Paul", age = "34", gender = "Male" });
+
+                    mItems.Add(new ContentOject() { name = "Intallaion", num = "1"});
+                    mItems.Add(new ContentOject() { name = "First Application", num = "2" });
+                    mItems.Add(new ContentOject() { name = "Application Manifest", num = "3" });
                 }
                 else
                 {
-                    
 
-                    mItems = new List<Person>();
-                    Person a = new Person();
-                    a.firstName = "YIIIIIIIIII";
-                    a.lastName = "LIUUUUUUU";
-                    a.age = "Guess";
-                    a.gender = "Male";
-                    mItems.Add(a);
+                    mItems = new List<ContentOject>();
 
-                    mItems.Add(new Person() { firstName = "Kobe", lastName = "James", age = "34", gender = "Male" });
-                    mItems.Add(new Person() { firstName = "HAHA", lastName = "Paul", age = "34", gender = "Male" });
 
+                    mItems.Add(new ContentOject() { name = "Lebron", num = "1" });
+                    mItems.Add(new ContentOject() { name = "Lebron", num = "2" });
                 }
 
 
 
-                MyListViewAdapter adapter = new MyListViewAdapter(context, mItems);
+                ContentAdatper adapter = new ContentAdatper(context, mItems);
 
 
                 lv.Adapter = adapter;
