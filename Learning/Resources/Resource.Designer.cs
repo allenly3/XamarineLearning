@@ -2375,6 +2375,9 @@ namespace Learning
 			// aapt resource value: 0x7f0800a4
 			public const int Title = 2131230884;
 			
+			// aapt resource value: 0x7f0800cf
+			public const int about = 2131230927;
+			
 			// aapt resource value: 0x7f0800b1
 			public const int action0 = 2131230897;
 			
@@ -2543,6 +2546,9 @@ namespace Learning
 			// aapt resource value: 0x7f080020
 			public const int disableHome = 2131230752;
 			
+			// aapt resource value: 0x7f0800c8
+			public const int drawer_layout = 2131230920;
+			
 			// aapt resource value: 0x7f08007e
 			public const int edit_query = 2131230846;
 			
@@ -2651,17 +2657,20 @@ namespace Learning
 			// aapt resource value: 0x7f080061
 			public const int list_item = 2131230817;
 			
-			// aapt resource value: 0x7f0800c9
-			public const int masked = 2131230921;
+			// aapt resource value: 0x7f0800ce
+			public const int loginout = 2131230926;
+			
+			// aapt resource value: 0x7f0800cc
+			public const int masked = 2131230924;
 			
 			// aapt resource value: 0x7f0800b4
 			public const int media_actions = 2131230900;
 			
-			// aapt resource value: 0x7f0800ca
-			public const int menu = 2131230922;
+			// aapt resource value: 0x7f0800cd
+			public const int menu = 2131230925;
 			
-			// aapt resource value: 0x7f0800c7
-			public const int message = 2131230919;
+			// aapt resource value: 0x7f0800ca
+			public const int message = 2131230922;
 			
 			// aapt resource value: 0x7f080031
 			public const int middle = 2131230769;
@@ -2674,6 +2683,9 @@ namespace Learning
 			
 			// aapt resource value: 0x7f08008b
 			public const int myListView = 2131230859;
+			
+			// aapt resource value: 0x7f0800c9
+			public const int nav_view = 2131230921;
 			
 			// aapt resource value: 0x7f080094
 			public const int navigation_header_container = 2131230868;
@@ -2909,6 +2921,9 @@ namespace Learning
 			// aapt resource value: 0x7f08006f
 			public const int title_template = 2131230831;
 			
+			// aapt resource value: 0x7f0800c7
+			public const int toolbar = 2131230919;
+			
 			// aapt resource value: 0x7f08003e
 			public const int top = 2131230782;
 			
@@ -2951,8 +2966,8 @@ namespace Learning
 			// aapt resource value: 0x7f0800a2
 			public const int viewpager = 2131230882;
 			
-			// aapt resource value: 0x7f0800c8
-			public const int visible = 2131230920;
+			// aapt resource value: 0x7f0800cb
+			public const int visible = 2131230923;
 			
 			// aapt resource value: 0x7f0800a6
 			public const int wel = 2131230886;
@@ -3155,76 +3170,82 @@ namespace Learning
 			public const int instruction = 2130968620;
 			
 			// aapt resource value: 0x7f04002d
-			public const int Login = 2130968621;
+			public const int instruction1 = 2130968621;
 			
 			// aapt resource value: 0x7f04002e
-			public const int Main = 2130968622;
+			public const int Login = 2130968622;
 			
 			// aapt resource value: 0x7f04002f
-			public const int notification_action = 2130968623;
+			public const int Main = 2130968623;
 			
 			// aapt resource value: 0x7f040030
-			public const int notification_action_tombstone = 2130968624;
+			public const int notification_action = 2130968624;
 			
 			// aapt resource value: 0x7f040031
-			public const int notification_media_action = 2130968625;
+			public const int notification_action_tombstone = 2130968625;
 			
 			// aapt resource value: 0x7f040032
-			public const int notification_media_cancel_action = 2130968626;
+			public const int notification_media_action = 2130968626;
 			
 			// aapt resource value: 0x7f040033
-			public const int notification_template_big_media = 2130968627;
+			public const int notification_media_cancel_action = 2130968627;
 			
 			// aapt resource value: 0x7f040034
-			public const int notification_template_big_media_custom = 2130968628;
+			public const int notification_template_big_media = 2130968628;
 			
 			// aapt resource value: 0x7f040035
-			public const int notification_template_big_media_narrow = 2130968629;
+			public const int notification_template_big_media_custom = 2130968629;
 			
 			// aapt resource value: 0x7f040036
-			public const int notification_template_big_media_narrow_custom = 2130968630;
+			public const int notification_template_big_media_narrow = 2130968630;
 			
 			// aapt resource value: 0x7f040037
-			public const int notification_template_custom_big = 2130968631;
+			public const int notification_template_big_media_narrow_custom = 2130968631;
 			
 			// aapt resource value: 0x7f040038
-			public const int notification_template_icon_group = 2130968632;
+			public const int notification_template_custom_big = 2130968632;
 			
 			// aapt resource value: 0x7f040039
-			public const int notification_template_lines_media = 2130968633;
+			public const int notification_template_icon_group = 2130968633;
 			
 			// aapt resource value: 0x7f04003a
-			public const int notification_template_media = 2130968634;
+			public const int notification_template_lines_media = 2130968634;
 			
 			// aapt resource value: 0x7f04003b
-			public const int notification_template_media_custom = 2130968635;
+			public const int notification_template_media = 2130968635;
 			
 			// aapt resource value: 0x7f04003c
-			public const int notification_template_part_chronometer = 2130968636;
+			public const int notification_template_media_custom = 2130968636;
 			
 			// aapt resource value: 0x7f04003d
-			public const int notification_template_part_time = 2130968637;
+			public const int notification_template_part_chronometer = 2130968637;
 			
 			// aapt resource value: 0x7f04003e
-			public const int pager_item = 2130968638;
+			public const int notification_template_part_time = 2130968638;
 			
 			// aapt resource value: 0x7f04003f
-			public const int row = 2130968639;
+			public const int pager_item = 2130968639;
 			
 			// aapt resource value: 0x7f040040
-			public const int select_dialog_item_material = 2130968640;
+			public const int row = 2130968640;
 			
 			// aapt resource value: 0x7f040041
-			public const int select_dialog_multichoice_material = 2130968641;
+			public const int select_dialog_item_material = 2130968641;
 			
 			// aapt resource value: 0x7f040042
-			public const int select_dialog_singlechoice_material = 2130968642;
+			public const int select_dialog_multichoice_material = 2130968642;
 			
 			// aapt resource value: 0x7f040043
-			public const int support_simple_spinner_dropdown_item = 2130968643;
+			public const int select_dialog_singlechoice_material = 2130968643;
 			
 			// aapt resource value: 0x7f040044
-			public const int tooltip = 2130968644;
+			public const int support_simple_spinner_dropdown_item = 2130968644;
+			
+			// aapt resource value: 0x7f040045
+			public const int test = 2130968645;
+			
+			// aapt resource value: 0x7f040046
+			public const int tooltip = 2130968646;
 			
 			static Layout()
 			{
@@ -3241,6 +3262,9 @@ namespace Learning
 			
 			// aapt resource value: 0x7f0e0000
 			public const int actionbar_main = 2131623936;
+			
+			// aapt resource value: 0x7f0e0001
+			public const int menu1 = 2131623937;
 			
 			static Menu()
 			{
@@ -3431,8 +3455,8 @@ namespace Learning
 			// aapt resource value: 0x7f0a015f
 			public const int Animation_Design_BottomSheetDialog = 2131362143;
 			
-			// aapt resource value: 0x7f0a0181
-			public const int AppTheme = 2131362177;
+			// aapt resource value: 0x7f0a0182
+			public const int AppTheme = 2131362178;
 			
 			// aapt resource value: 0x7f0a009a
 			public const int Base_AlertDialog_AppCompat = 2131361946;
@@ -3923,11 +3947,14 @@ namespace Learning
 			// aapt resource value: 0x7f0a0161
 			public const int Base_Widget_Design_TabLayout = 2131362145;
 			
-			// aapt resource value: 0x7f0a0182
-			public const int CustomActionBarTheme = 2131362178;
-			
 			// aapt resource value: 0x7f0a0183
-			public const int MyActionBar = 2131362179;
+			public const int CustomActionBarTheme = 2131362179;
+			
+			// aapt resource value: 0x7f0a0184
+			public const int MyActionBar = 2131362180;
+			
+			// aapt resource value: 0x7f0a0181
+			public const int MyTheme_Base = 2131362177;
 			
 			// aapt resource value: 0x7f0a001e
 			public const int Platform_AppCompat = 2131361822;

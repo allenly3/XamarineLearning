@@ -66,16 +66,28 @@ namespace Learning
                 StartActivity(intent);
             }
 
-            else
+            else if(mItems[e.Position].firstName== "Lebron")
             {
                 Intent intent = new Intent(this, typeof(Swap));
                 StartActivity(intent);
+            }
+            else
+            {
+                Intent intent = new Intent(this, typeof(Test));
+                StartActivity(intent);
+
             }
         }
 
         private void itemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             Console.WriteLine(mItems[e.Position].firstName);
+        }
+
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.actionbar_main, menu);
+            return base.OnCreateOptionsMenu(menu);
         }
     }
 }

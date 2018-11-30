@@ -78,16 +78,34 @@ namespace Learning
 
                     mItems.Add(new ContentOject() { name = "Intallaion", num = "1"});
                     mItems.Add(new ContentOject() { name = "First Application", num = "2" });
-                    mItems.Add(new ContentOject() { name = "Application Manifest", num = "3" });
+                    mItems.Add(new ContentOject() { name = "Android Resource", num = "3" });
+                    mItems.Add(new ContentOject() { name = "Activity Lifecycle", num = "4" });
+                    mItems.Add(new ContentOject() { name = "Permissions", num = "5" });
+                    mItems.Add(new ContentOject() { name = "Menus", num = "6" });
+                    mItems.Add(new ContentOject() { name = "Layout", num = "7" });
+                    mItems.Add(new ContentOject() { name = "Android Widgets", num = "8" });
+                    mItems.Add(new ContentOject() { name = "Android View", num = "9" });
+                    mItems.Add(new ContentOject() { name = "Adapter", num = "10" });
+                    mItems.Add(new ContentOject() { name = "Fragement", num = "11" });
+                    mItems.Add(new ContentOject() { name = "Gallery", num = "12" });
                 }
                 else
                 {
 
                     mItems = new List<ContentOject>();
 
-
-                    mItems.Add(new ContentOject() { name = "Lebron", num = "1" });
-                    mItems.Add(new ContentOject() { name = "Lebron", num = "2" });
+                    mItems.Add(new ContentOject() { name = "Creating Login System", num = "1" });
+                    mItems.Add(new ContentOject() { name = "Dialog Fragment", num = "2" });
+                    mItems.Add(new ContentOject() { name = "Sliding Interface", num = "3" });
+                    mItems.Add(new ContentOject() { name = "Swaping Refresh", num = "4" });
+                    mItems.Add(new ContentOject() { name = "Multithreading", num = "5" });
+                    mItems.Add(new ContentOject() { name = "Custom ActionBar", num = "6" });
+                    mItems.Add(new ContentOject() { name = "RecyclerView", num = "7" });
+                    mItems.Add(new ContentOject() { name = "Some Widgets", num = "8" });
+                    mItems.Add(new ContentOject() { name = "Google+ Sign in", num = "9" });
+                    mItems.Add(new ContentOject() { name = "Design Tool Bar", num = "10" });
+                    mItems.Add(new ContentOject() { name = "Nesting Fragment", num = "11" });
+               
                 }
 
 

@@ -47,10 +47,15 @@ namespace Learning
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
             View row = convertView;
-            if(row==null)
+      
+            if(position%2==0)
             {
                 row = LayoutInflater.From(context).Inflate(Resource.Layout.instruction, null, false);
 
+            }
+            else
+            {
+                row = LayoutInflater.From(context).Inflate(Resource.Layout.instruction1, null, false);
             }
             TextView num = row.FindViewById<TextView>(Resource.Id.num);
             TextView title = row.FindViewById<TextView>(Resource.Id.Title);

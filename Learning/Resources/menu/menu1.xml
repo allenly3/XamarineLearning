@@ -1,0 +1,14 @@
+﻿<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:id="@+id/home"
+        android:showAsAction="always"
+        android:title="home"/>
+  <item android:id="@+id/loginout"
+      android:showAsAction="always"
+      android:title="Login Sign in"
+          />
+  <item android:id="@+id/about"
+      android:showAsAction="always"
+      android:title="about us"
+          />
+
+</menu>
