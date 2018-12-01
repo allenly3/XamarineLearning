@@ -119,7 +119,7 @@ namespace Learning
              
                 if(pos==1)
                 {
-
+                    lv.ItemClick += Lv_ItemClick1;
                 }
                 else
                 {
@@ -129,12 +129,89 @@ namespace Learning
                 return view;
             }
 
+            private void Lv_ItemClick1(object sender, AdapterView.ItemClickEventArgs e)
+            {
+                if (e.Position == 0)
+                {
+                    var uri = Android.Net.Uri.Parse("https://www.tutorialspoint.com/xamarin/xamarin_installation.htm");
+                    var intent = new Intent(Intent.ActionView, uri);
+                    context.StartActivity(intent);
+                }
+                else if (e.Position == 1)
+                {
+
+                    var uri = Android.Net.Uri.Parse("https://www.tutorialspoint.com/xamarin/xamarin_first_application.htm");
+                    var intent = new Intent(Intent.ActionView, uri);
+                    context.StartActivity(intent);
+                }
+                else if (e.Position == 2)
+                {
+
+                    var uri = Android.Net.Uri.Parse("https://www.tutorialspoint.com/xamarin/xamarin_android_resources.htm");
+                    var intent = new Intent(Intent.ActionView, uri);
+                    context.StartActivity(intent);
+                }
+                else if (e.Position == 3)
+                {
+
+                    var uri = Android.Net.Uri.Parse("https://www.tutorialspoint.com/xamarin/xamarin_android_activity_lifecycle.htm");
+                    var intent = new Intent(Intent.ActionView, uri);
+                    context.StartActivity(intent);
+                }
+                else if (e.Position == 4)
+                {
+
+                    var uri = Android.Net.Uri.Parse("https://www.tutorialspoint.com/xamarin/xamarin_permissions.htm");
+                    var intent = new Intent(Intent.ActionView, uri);
+                    context.StartActivity(intent);
+                }
+                else
+                {
+                    var uri = Android.Net.Uri.Parse("https://www.tutorialspoint.com/xamarin/index.htm");
+                    var intent = new Intent(Intent.ActionView, uri);
+                    context.StartActivity(intent);
+
+                }
+            }
+
             private void Lv_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
             {
-                var uri = Android.Net.Uri.Parse("http://www.google.ca");
-                var intent = new Intent(Intent.ActionView, uri);
-                context.StartActivity(intent);
-                
+                if (e.Position == 0)
+                {
+                    var uri = Android.Net.Uri.Parse("https://www.youtube.com/watch?v=tf2O_t-ayJ8&index=7&t=0s&list=PLCuRg51-gw5VqYchUekCqxUS9hEZkDf6l");
+                    var intent = new Intent(Intent.ActionView, uri);
+                    context.StartActivity(intent);
+                }
+                else if(e.Position==1)
+                {
+
+                    var uri = Android.Net.Uri.Parse("https://www.youtube.com/watch?v=hX-cZkxqRgc");
+                    var intent = new Intent(Intent.ActionView, uri);
+                    context.StartActivity(intent);
+                }
+                else if (e.Position == 2)
+                {
+
+                    var uri = Android.Net.Uri.Parse("https://www.youtube.com/watch?v=0Rr0ZCvX_Zs");
+                    var intent = new Intent(Intent.ActionView, uri);
+                    context.StartActivity(intent);
+                }
+                else if (e.Position == 3)
+                {
+
+                    var uri = Android.Net.Uri.Parse("https://www.youtube.com/watch?v=s1BA493y9zQ&t=34s");
+                    var intent = new Intent(Intent.ActionView, uri);
+                    context.StartActivity(intent);
+                }
+                else if (e.Position == 4)
+                {
+
+                    var uri = Android.Net.Uri.Parse("https://www.youtube.com/watch?v=wSWdNP5FC_I");
+                    var intent = new Intent(Intent.ActionView, uri);
+                    context.StartActivity(intent);
+                }
+
+
             }
 
             public string GetHeaderTitle (int position)
