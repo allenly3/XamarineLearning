@@ -37,9 +37,16 @@ namespace Learning
 
         private void GSignInbt_Click(object sender, EventArgs e)
         {
+            
             if(gUserName.Text=="allenly3"&&gPassword.Text=="123")
             {
-
+                Toast.MakeText(this.Context, "Successful", ToastLength.Long).Show();
+                this.Dismiss();
+            }
+            else
+            {
+                Toast.MakeText(this.Context, "Failed", ToastLength.Long).Show();
+                this.Dismiss();
             }
         }
 

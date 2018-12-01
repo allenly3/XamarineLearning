@@ -12,6 +12,8 @@ using Android.Util;
 using Android.Views;
 using Android.Widget;
 using System.Data.SqlClient;
+using System.Net;
+using System.Collections.Specialized;
 
 namespace Learning
 {
@@ -83,29 +85,25 @@ namespace Learning
         
         private void submit(Object sender, EventArgs e)
         {
-                sumbitComplete.Invoke(this, new SubmitEventArgs(gUserName.Text, gEmail.Text, gPassword.Text));
-                 this.Dismiss();
-            
-            //MySqlConnection con = new MySqlConnection("Server=db4free.net;Port=3306;database=allendb;User Id=allenly3;Password=900729ly3;charset=utf8");
 
-            //try
-            //{
-            //    if(con.State==ConnectionState.Closed)
-            //    {
-            //        gResult.Text = con.State.ToString();
-            //    }
-            //    con.Open();
-            //}
-            //catch (Exception ex)
-            //{
-            //    gResult.Text = ex.ToString();
-            //}
-            //finally
-            //{
-            //    con.Close();
-            //}
-           
 
+            WebClient client = new WebClient();
+            Uri uri = new Uri("http://127.0.0.1/index.php");
+
+            NameValueCollection parameters = new NameValueCollection();
+            parameters.Add("Name", gUserName.Text);
+            parameters.Add("password", gPassword.Text);
+
+            client.UploadValuesCompleted += Client_UploadValuesCompleted;
+            client.UploadValuesTaskAsync(uri, parameters);
+
+
+        }
+
+        private void Client_UploadValuesCompleted(object sender, UploadValuesCompletedEventArgs e)
+        {
+            sumbitComplete.Invoke(this, new SubmitEventArgs(gUserName.Text, gEmail.Text, gPassword.Text));
+            this.Dismiss();
         }
 
         public override void OnActivityCreated(Bundle savedInstanceState)
