@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace Learning
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/CustomActionBarTheme")]
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme")]
     public class Swap : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)

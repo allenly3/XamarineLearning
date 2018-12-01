@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace Learning
 {
-    [Activity(Label = "LoginPage")]
+    [Activity(Label = "LoginPage",Theme = "@style/AppTheme")]
     public class LoginPage : Activity
     {
 
@@ -26,12 +26,11 @@ namespace Learning
             // Create your application here
             SetContentView(Resource.Layout.Login);
 
-            string fname = Intent.Extras.GetString("f");
-            string lname = Intent.Extras.GetString("l");
+    
 
             TextView tv= FindViewById<TextView>(Resource.Id.wel);
 
-            tv.Text = "Welcome " + fname + " " + lname + " !";
+            tv.Text = "Welcome To Xamarin !";
 
             gbtSignup = FindViewById<Button>(Resource.Id.signup);
             gbtSignin = FindViewById<Button>(Resource.Id.signin);

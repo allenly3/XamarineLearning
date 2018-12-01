@@ -10,7 +10,7 @@ using Android.Content;
 
 namespace Learning
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/CustomActionBarTheme", MainLauncher = true)]
+    [Activity(Label = "@string/app_name", Theme = "@style/CustomActionBarTheme")]
     public class MainActivity : Activity
     {
 
@@ -36,8 +36,8 @@ namespace Learning
             a.gender = "Male";
             mItems.Add(a);
 
-            mItems.Add(new Person() { firstName = "Lebron", lastName = "James", age = "34", gender = "Male" });
-            mItems.Add(new Person() { firstName = "Chris", lastName = "Paul", age = "34", gender = "Male" });
+            mItems.Add(new Person() { firstName = "Lebron", lastName = "YIIII", age = "34", gender = "Male" });
+            mItems.Add(new Person() { firstName = "Chris", lastName = "LIU", age = "34", gender = "Male" });
 
 
 

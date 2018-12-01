@@ -61,6 +61,7 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.cs" />
     <Compile Include="ContentAdatper.cs" />
     <Compile Include="ContentOject.cs" />
     <Compile Include="DialogSignIn.cs" />
@@ -198,6 +199,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\test.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\about.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

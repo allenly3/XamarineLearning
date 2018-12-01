@@ -11,4 +11,8 @@
       android:title="about us"
           />
 
+  <item android:id="@+id/contact"
+    android:showAsAction="always"
+    android:title="contact us"
+          />
 </menu>

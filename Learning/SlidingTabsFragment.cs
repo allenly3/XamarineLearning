@@ -88,6 +88,8 @@ namespace Learning
                     mItems.Add(new ContentOject() { name = "Adapter", num = "10" });
                     mItems.Add(new ContentOject() { name = "Fragement", num = "11" });
                     mItems.Add(new ContentOject() { name = "Gallery", num = "12" });
+
+                    
                 }
                 else
                 {
@@ -114,7 +116,25 @@ namespace Learning
 
 
                 lv.Adapter = adapter;
+             
+                if(pos==1)
+                {
+
+                }
+                else
+                {
+                    lv.ItemClick += Lv_ItemClick;
+                }
+
                 return view;
+            }
+
+            private void Lv_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+            {
+                var uri = Android.Net.Uri.Parse("http://www.google.ca");
+                var intent = new Intent(Intent.ActionView, uri);
+                context.StartActivity(intent);
+                
             }
 
             public string GetHeaderTitle (int position)
