@@ -32,7 +32,7 @@ namespace Learning
             name.Add(" ");
             name.Add("YI LIU C0704825");
             name.Add("Vraj Shah C0714962");
-            name.Add("Preksh Narsidani C0705974");
+            name.Add("Preksh Mehta C0705974");
             name.Add("Moez Narsidani C0716607");
             mArrayAdapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleExpandableListItem1, name);
 
