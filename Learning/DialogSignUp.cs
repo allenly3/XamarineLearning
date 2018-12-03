@@ -45,10 +45,10 @@ namespace Learning
             set { repassword = value; }
         }
         
-        public SubmitEventArgs(string n,string e,string p):base()
+        public SubmitEventArgs(string n,string p):base()
         {
             Name = n;
-            Email = e;
+      
             Password = p;   
         }
 
@@ -91,7 +91,7 @@ namespace Learning
             Uri uri = new Uri("http://127.0.0.1/index.php");
 
             NameValueCollection parameters = new NameValueCollection();
-            parameters.Add("Name", gUserName.Text);
+            parameters.Add("name", gUserName.Text);
             parameters.Add("password", gPassword.Text);
 
             client.UploadValuesCompleted += Client_UploadValuesCompleted;
@@ -102,7 +102,7 @@ namespace Learning
 
         private void Client_UploadValuesCompleted(object sender, UploadValuesCompletedEventArgs e)
         {
-            sumbitComplete.Invoke(this, new SubmitEventArgs(gUserName.Text, gEmail.Text, gPassword.Text));
+            sumbitComplete.Invoke(this, new SubmitEventArgs(gUserName.Text,  gPassword.Text));
             this.Dismiss();
         }
 

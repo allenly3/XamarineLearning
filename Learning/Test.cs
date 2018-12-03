@@ -79,6 +79,10 @@ namespace Learning
                 Intent intent = new Intent(this, typeof(About));
                 StartActivity(intent);
             }
+           else if(mLeftItems[e.Position] == "Home")
+            {
+                mDrawerLayout.CloseDrawers();
+            }
 
         }
 
